@@ -13,6 +13,6 @@ It is developed using pygame
 
 
 Authors: 
-Mazureanu Grigorian - Grig13
-Sanda Mihnea - Mihnea25
+Mazureanu Grigorian - Grig13/\
+Sanda Mihnea - Mihnea25/\
 Maracine Andrei - maracineee
