@@ -1,5 +1,6 @@
 import pygame, sys
 from Game import *
+from two_players import *
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -28,7 +29,6 @@ large_font = pygame.font.Font('Stacylia DEMO.otf', 85)
 
 click = False
 
-
 def text_objects(text, color, size = "small"):
     if size == "small":
         textSurface = small_font.render(text, True, color)
@@ -42,6 +42,14 @@ def text_to_button(message, color, buttonX, buttonY, buttonWidth, buttonHeight, 
     textSurf, textRect = text_objects(message, color, size)
     textRect.center = ((buttonX + (buttonWidth/2)), (buttonY + (buttonHeight/2)))
     screen.blit(textSurf, textRect)
+
+def button(text, x, y, width, height, inactive_color, active_color):
+    cur = pygame.mouse.get_pos()
+    if x + width >= cur[0] >= x and y + height >= cur[1] >= y:
+        pygame.draw.rect(menu_background, active_color, (x, y, width, height))
+    else:
+        pygame.draw.rect(menu_background, inactive_color, (x, y, width, height))
+    text_to_button(text, black, x, y, width, height)
 
 def main_menu():
     while True:
@@ -96,4 +104,4 @@ def main_menu():
         text_to_button("Options", black, 800, 600, 200, 50)
         pygame.display.update()
         clock.tick(30)
-main_menu()
+main_menu() 
