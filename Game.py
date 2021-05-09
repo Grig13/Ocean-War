@@ -1,5 +1,4 @@
-import pygame
-import sys
+import pygame, sys, os
 
 pygame.init()
 
@@ -10,7 +9,7 @@ screen_height = 720
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Ocean War")
 
-menu_background = pygame.image.load('ocean_wallpaper(unfinished).png')
+menu_background = pygame.image.load(os.path.join('Assets', 'ocean_wallpaper_game.png'))
 
 click = False
 

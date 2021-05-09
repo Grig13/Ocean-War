@@ -1,15 +1,17 @@
-import pygame, sys
+import pygame, sys, os
 from Game import *
 from two_players import *
 
 pygame.init()
+pygame.mixer.init()
+
 clock = pygame.time.Clock()
 
 screen_width = 1280
 screen_height = 720
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Ocean War")
-menu_background = pygame.image.load('ocean_wallpaper(unfinished).png')
+menu_background = pygame.image.load(os.path.join('Assets', 'ocean_wallpaper_game.png'))
 
 black = (0, 0, 0)
 red = (255, 0, 0)
@@ -23,9 +25,10 @@ mediumseagreen = (60,179,113)
 light_green = (144,238,144)
 
 
-small_font = pygame.font.Font('Stacylia DEMO.otf', 20)
-medium_font = pygame.font.Font('Stacylia DEMO.otf', 50)
-large_font = pygame.font.Font('Stacylia DEMO.otf', 85)
+small_font = pygame.font.Font(os.path.join('Assets','Stacylia DEMO.otf'), 20)
+medium_font = pygame.font.Font(os.path.join('Assets','Stacylia DEMO.otf'), 50)
+large_font = pygame.font.Font(os.path.join('Assets','Stacylia DEMO.otf'), 80)
+main_menu_background_music = pygame.mixer.Sound(os.path.join('Assets', 'background_music.mp3'))
 
 click = False
 
@@ -53,6 +56,7 @@ def button(text, x, y, width, height, inactive_color, active_color):
 
 def main_menu():
     while True:
+        main_menu_background_music.play()
         mouse_x, mouse_y = pygame.mouse.get_pos()
         mouse_position = pygame.mouse.get_pos()
        
@@ -101,7 +105,7 @@ def main_menu():
                     click = True       
         text_to_button("SinglePlayer", black, 200, 600, 200, 50) 
         text_to_button("2 Players", black, 500, 600, 200, 50)
-        text_to_button("Options", black, 800, 600, 200, 50)
+        text_to_button("Controls", black, 800, 600, 200, 50)
         pygame.display.update()
         clock.tick(30)
 main_menu() 
