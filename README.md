@@ -1,14 +1,14 @@
 # Ocean-War
 
-This is a game made as a project for college.
+This is a game made as a project for faculty.
 It is developed using pygame/
 
 #About game:
  This game is entitled 'Ocean War'. It can be played in 2 different ways. 
- The first one is singleplayer mode, which has multiple levels. The player consisting of a fish that shoots bubble bullets has to defeat all the enemies of the current level in order to advance to the next one.
- The other playable mode is "2 players" mode. The screen is divided in 2. 1 player has a half the other player other half. Players both, individually, control a fish that shoots bubble bullets. They start with 3 lives each. The main goal is to defeat your enemy by reducing his lives to 0. Randomly different power-ups spawn that contains a chance of 75% for a buff and 25% for a debuff. As the power-ups spawn there are also bad objects spawning that got 75% chance for debuff or 25% for a special powerfull buff.
+ The first one is singleplayer mode, which in inspired by "Space Invaders" type of gameplay. The player consists of a fish that shoots enemies pictured as sharks. The Single player mode target is to accumulate as many points as you can. Single player mode has a hud that represents the player health bars, shrinking every time the player get hit, his lives and his score. Also enemies have variable movement speed. After a certain amount of time on the screen will start spawning worms that gives you +1 hp if you collide with them.
+ The other playable mode is "2 players" mode. The screen is divided in 2. 1 player has a half the other player other half. Players both, individually, control a fish that shoots   bullets. They start with 10 lives each. The main goal is to defeat your enemy by reducing his lives to 0. 
  
- The game menu also have an option button from where the user can adjust screen size + he can see the controls.
+ The game menu also have a "Controls" button from where the user can see the controls for every game mode.
 
 
 
